@@ -1,11 +1,12 @@
 
 
 const getAllUserServices = async () => {
-    console.log('Get all users services')
+  console.log('Get all users services - modified')
+  console.log('Otro msg');
 }
 
 const userServices = {
-    getAllUserServices
+  getAllUserServices
 }
 
 export default userServices
