@@ -6,6 +6,7 @@ import compression from 'compression'
 // routes
 import authRoutes from '../routes/authRoutes.js'
 import userRoutes from '../routes/userRoutes.js'
+import dbConnect from '../config/db.postgres.js'
 
 class Server {
   constructor() {
@@ -15,8 +16,20 @@ class Server {
       auth: '/api/auth',
       users: '/api/users',
     }
+    this.coneccionDB()
     this.middlewares()
     this.routes()
+  }
+
+
+  async coneccionDB() {
+    try {
+      await dbConnect.authenticate()
+      await dbConnect.sync()
+      console.log('DB online');
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   middlewares() {
