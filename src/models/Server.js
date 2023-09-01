@@ -4,6 +4,7 @@ import compression from 'compression'
 
 
 // routes
+import authRoutes from '../routes/authRoutes.js'
 import userRoutes from '../routes/userRoutes.js'
 
 class Server {
@@ -26,7 +27,7 @@ class Server {
   }
 
   routes() {
-    this.app.use(this.paths.auth)
+    this.app.use(this.paths.auth, authRoutes)
     this.app.use(this.paths.users, userRoutes)
   }
 
