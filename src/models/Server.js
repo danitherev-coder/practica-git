@@ -2,6 +2,10 @@ import express from 'express'
 import cors from 'cors'
 import compression from 'compression'
 
+
+// routes
+import userRoutes from '../routes/userRoutes.js'
+
 class Server {
   constructor() {
     this.app = express()
@@ -23,7 +27,7 @@ class Server {
 
   routes() {
     this.app.use(this.paths.auth)
-    this.app.use(this.paths.users)
+    this.app.use(this.paths.users, userRoutes)
   }
 
   listen() {
