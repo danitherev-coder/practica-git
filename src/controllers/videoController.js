@@ -1,8 +1,8 @@
-const videoCTRL = async () => {
-    resizeBy.json({
-        msg: 'xd'
-    })
+const videoCTRLS = async () => {
+  resizeBy.json({
+    msg: 'VIDEO CONTROLLER'
+  })
 }
 
 
-export default videoCTRL
+export default videoCTRLS
