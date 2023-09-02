@@ -1,7 +1,7 @@
-import { DataTypes } from "sequelize";
+import { DataTypes } from "sequelize" // comentarios xd
 import db from "../config/db.postgres.js";
 
-const UserModel = db.define('user', {
+const UserModels = db.define('user', {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -24,4 +24,4 @@ const UserModel = db.define('user', {
   }
 })
 
-export default UserModel
+export default UserModels;
