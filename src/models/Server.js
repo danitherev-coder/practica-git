@@ -13,6 +13,7 @@ class Server {
     this.app = express()
     this.port = process.env.PORT || 8080
     this.paths = {
+
       auth: '/api/auth',
       users: '/api/users',
     }
